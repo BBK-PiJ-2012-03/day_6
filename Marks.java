@@ -2,17 +2,17 @@ import java.util.*;
 
 public class Marks {
 Scanner scanner = new Scanner(System.in);
-boolean finished = false;
-private int counter = 0;
-private int countDist = 0;
-private int countPass = 0;
-private int countInvalid = 0;
-private int countFail = 0;
+
 
 
     public void checkMarks() {
         int mark;
-        do {
+	int counter = 0;
+	int countDist = 0;
+	int countPass = 0;
+	int countInvalid = 0;
+	int countFail = 0;
+	        do {
             System.out.println("Give me marks, -1 to finilize");
             mark = scanner.nextInt();
             counter++;
