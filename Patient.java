@@ -22,10 +22,10 @@ public class Patient {
 
 	public boolean deletePatient(Patient patient) {
 	  if (this.nextPatient == null) {
-	  // patient to remove was not found
+	  //patient to remove was not found
 	  return false;
 	} else if (this.nextPatient.name.equals(patient.name)) {
-	  System.out.println("We found it! It is the next one!");
+	  //We found it! It is the next one!
 	  // Now link this patient to the one after the next
 	  this.nextPatient = nextPatient.nextPatient;
 	  return true;
@@ -50,13 +50,31 @@ public class Patient {
  Patient forthPatient = new Patient("Dying", 100, "Brain Cancer");
  patientListStart.addPatient(forthPatient);
 
+ Patient fifthPatient = new Patient("Baby", 3, "Fever");
+ patientListStart.addPatient(fifthPatient);
+
+ Patient sixthPatient = new Patient("Peter", 30, "Pneumonia");
+ patientListStart.addPatient(sixthPatient);
+
+ Patient seventhPatient = new Patient("Bob", 56, "Lupus");
+ patientListStart.addPatient(seventhPatient);
+
+ Patient eigthPatient = new Patient("Lora", 31, "Broken Leg");
+ patientListStart.addPatient(eigthPatient);
+
+ Patient ninethPatient = new Patient("Eliza", 35, "Leuchemia");
+ patientListStart.addPatient(ninethPatient);
+
+ Patient tenthPatient = new Patient("Chris", 58, "Asthma");
+ patientListStart.addPatient(tenthPatient);
 
  patientListStart.deletePatient(secondPatient);
+ 
  System.out.println(firstPatient.name);
 
  Patient pos = patientListStart;
  while(pos.nextPatient != null){
-	System.out.println(pos.nextPatient.name);
+	System.out.println(pos.nextPatient.name + ", " + pos.nextPatient.age + ", " + pos.nextPatient.illness);
 	pos = pos.nextPatient;
 }
 
